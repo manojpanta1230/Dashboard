@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
 }
-body{
+
+body {
     font-family: "Montserrat", serif;
 }
 
@@ -15,33 +14,37 @@ body{
     position: relative;
 }
 
-.dashboard > main{
+.dashboard>main {
     flex: 1;
     overflow: hidden;
 }
-.dashboard > .sidebar {
+
+.dashboard>.sidebar {
     background-color: #4c4f53;
     color: #fff;
-   min-height:100vh; 
-   max-height: 100vh;
-   overflow: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: scroll;
     padding-top: 10px;
 }
+
 .sidebar::-webkit-scrollbar {
     display: none;
-  }
-  .sidebar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */   
-  }
+}
+
+.sidebar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
 
 .logo-image img {
-
     height: 160px;
     padding-left: 20px;
-
 }
-.sub-menu{
+
+.sub-menu {
     display: none;
 }
 
@@ -50,7 +53,6 @@ body{
     padding: 20px;
     display: grid;
     gap: 20px;
-
 }
 
 .menu-item {
@@ -61,27 +63,29 @@ body{
     border-left: 4px solid transparent;
     transition: all 0.3s ease;
     cursor: pointer;
-
 }
-
 
 .menu-item i {
     margin-right: 8px;
 }
 
 .dropdown-item {
-    padding: 0;
+    position: relative;
 }
 
 .dropdown-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    width: 100%;
 }
 
 .dropdown-toggle i.fas.fa-plus {
-    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-item.active .dropdown-toggle i.fas.fa-plus {
+    transform: rotate(45deg);
 }
 
 .menu-item:hover,
@@ -111,7 +115,6 @@ body{
     vertical-align: middle;
     margin-left: 10px;
     font-size: 20px;
-
 }
 
 .profile-name {
@@ -150,7 +153,6 @@ body{
     display: block;
 }
 
-
 .topbar {
     display: flex;
     justify-content: end;
@@ -168,15 +170,12 @@ body{
     align-items: center;
 }
 
-
-
 .tri-button {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     padding: 65px;
 }
-
 
 .inner-button {
     width: 272px;
@@ -196,7 +195,6 @@ body{
     height: max-content;
     background-color: rgb(70, 70, 70);
     color: white;
-
 }
 
 .semi-container-bar ul {
@@ -212,7 +210,6 @@ body{
 }
 
 .semi-container tr {
-
     /* text-align: center; */
     font-size: 10px;
     display: flex;
@@ -223,10 +220,9 @@ body{
 
 */ .tooglebar {
     display: none;
-
 }
-.sub-menu .active
-.sub-menu{
+
+.sub-menu .active .sub-menu {
     display: none;
     padding-left: 20px;
     background-color: #34495e;
@@ -256,14 +252,12 @@ body{
     .tooglebar {
         display: none;
     }
-
 }
 
 @media (max-width:769px) {
     .dashboard {
         display: inline-block;
     }
-
     .side-navbar {
         display: none;
         background-color: black;
@@ -273,39 +267,30 @@ body{
         padding: 20px;
         height: 100vh;
         z-index: 5;
-     
     }
-
     .side-navbar>span {
         display: flex;
         justify-content: end;
         font-size: 40px;
         color: white;
-
     }
-
     .sidebar {
         display: flex;
         width: 100%;
         justify-content: space-between;
     }
-
     .menu {
-
         display: none;
         /* flex-wrap: wrap;
             align-items: center; */
     }
-
     .tooglebar {
         display: flex;
         align-items: center;
     }
-
     .tooglebar>span {
         font-size: 50px;
     }
-
 }
 
 @media (max-width:576px) {
@@ -313,44 +298,33 @@ body{
         grid-template-columns: repeat(1, 1fr);
         padding: 48px;
     }
-
     .tri-button {
         grid-template-columns: repeat(2, 1fr);
         padding: 32px;
-
     }
- #edit-form{
-    width: 100%;
-}
+    #edit-form {
+        width: 100%;
+    }
     .inner-button {
         width: 145px;
     }
-
     .inner-button p {
         font-size: 15px;
     }
-
     .side-navbar {
         z-index: 5;
     }
-
     .logo-image img {
         width: 144px;
         height: 100px;
     }
 }
 
-
-
-
-
-
-
 .container {
     display: flex;
-        gap: 20px;
-        padding: 35px;
-        flex-wrap: wrap;
+    gap: 20px;
+    padding: 35px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -363,7 +337,8 @@ body{
 }
 
 .balance-card {
-    background: linear-gradient(285deg, #302a2a, #2b262c);    /*Purple Gradient*/
+    background: linear-gradient(285deg, #302a2a, #2b262c);
+    /*Purple Gradient*/
     color: white;
     position: relative;
     /*For the circle background effect later*/
@@ -420,7 +395,6 @@ body{
 
 .table-container {
     /* Make the container responsive */
-  
     /* Set a maximum width for larger screens */
     overflow-x: auto;
     /* Enable horizontal scrolling on smaller screens */
@@ -462,13 +436,13 @@ body{
 .order-table tbody tr:last-child {
     border-bottom: none;
 }
+
 .button-container {
     display: flex;
     gap: 20px;
     justify-content: start;
     padding-left: 38px;
-        flex-wrap: wrap;
-
+    flex-wrap: wrap;
 }
 
 .dashboard-button {
@@ -496,33 +470,37 @@ body{
     border-color: #4e6a85;
 }
 
+
 /* Style the icons (optional - adjust size as needed) */
+
 .dashboard-button i {
     font-size: 1.2em;
 }
 
+
 /* Responsive adjustments using media queries */
+
 @media (max-width: 769px) {
     .order-table {
         font-size: 0.85em;
         /* Smaller font size on smaller screens */
     }
-
     .order-table th,
     .order-table td {
         padding: 8px 10px;
         /* Reduced padding */
     }
-  .dashboard >.sidebar{
+    .dashboard>.sidebar {
         min-height: 0;
-    color: white;}
+        color: white;
+    }
 }
+
 @media (max-width:576px) {
-    .dashboard >.sidebar{
-    
-        min-height: 0;}
-    .container{
+    .dashboard>.sidebar {
+        min-height: 0;
+    }
+    .container {
         padding: 67px;
     }
-    }
-
+}

@@ -167,32 +167,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="container">
-          <div class="card balance-card">
-            <i class="fas fa-bell"></i>
-            <h2>Revenue</h2>
 
-            <p class="value">$23,540.00</p>
-          </div>
-          <div class="card balance-card">
-            <i class="fas fa-bell"></i>
-            <h2>Orders</h2>
-
-            <p class="value">20</p>
-          </div>
-          <div class="card balance-card">
-            <i class="fa-solid fa-vault"></i>
-            <h2>Room Available</h2>
-
-            <p class="value">100</p>
-          </div>
-          <div class="card balance-card">
-            <i class="fas fa-tasks"></i>
-            <h2>Bookings</h2>
-
-            <p class="value">50</p>
-          </div>
-        </div> -->
           <div class="button-container">
             <button class="dashboard-button">
               <i class="fas fa-ticket-alt"></i>
@@ -241,6 +216,7 @@
 
       function toggleSubMenu(id) {
         var submenus = document.querySelectorAll(".sub-menu");
+        console.log(submenus);
 
         submenus.forEach(function (submenu) {
           if (submenu.id !== id) {
